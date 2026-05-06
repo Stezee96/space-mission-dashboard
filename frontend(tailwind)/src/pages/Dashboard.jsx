@@ -37,7 +37,7 @@ function Dashboard({ sidebarOpen, setSidebarOpen }) {
     };
 
     axios
-      .get("http://127.0.0.1:8000/api/dashboard-summary", { params })
+      .get("https://space-mission-dashboard.onrender.com/api/dashboard-summary", { params })
       .then((res) => setDashboardData(res.data || {}))
       .catch((err) => console.error("Dashboard API error:", err))
       .finally(() => setLoading(false));

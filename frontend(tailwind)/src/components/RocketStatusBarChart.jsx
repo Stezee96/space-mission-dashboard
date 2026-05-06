@@ -17,7 +17,7 @@ const HeatmapLaunches = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/heatmap-data")
+      .get("https://space-mission-dashboard.onrender.com/api/heatmap-data")
       .then((res) => setData(res.data))
       .catch((err) => console.error("Heatmap data fetch failed", err))
       .finally(() => setLoading(false));

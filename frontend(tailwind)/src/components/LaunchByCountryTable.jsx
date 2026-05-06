@@ -9,7 +9,7 @@ const LaunchByCountryTable = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/launch-summary-by-country")
+      .get("https://space-mission-dashboard.onrender.com/api/launch-summary-by-country")
       .then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
@@ -30,7 +30,7 @@ const LaunchByCountryTable = () => {
 
     try {
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/launch-sites-by-country?country=${country}`
+        `https://space-mission-dashboard.onrender.com/api/launch-sites-by-country?country=${country}`
       );
       if (Array.isArray(res.data)) {
         setExpandedCountry(country);

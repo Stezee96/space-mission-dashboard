@@ -22,7 +22,7 @@ function PredictForm() {
   useEffect(() => {
     const fetchDropdowns = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/distinct-values")
+        const res = await axios.get("https://space-mission-dashboard.onrender.com/api/distinct-values")
         setDropdowns({
           rockets: res.data.rockets || [],
           companies: res.data.companies || [],

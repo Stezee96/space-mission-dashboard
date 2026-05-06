@@ -6,7 +6,7 @@ const StatOverview = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/launch-stat-summary")
+      .get("https://space-mission-dashboard.onrender.com/api/launch-stat-summary")
       .then((res) => {
         setStats({
           total_missions: res.data.total_missions,

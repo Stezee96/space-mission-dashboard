@@ -9,7 +9,7 @@ const MissionsTable = ({ rocket, company, status, startYear, endYear, search }) 
     const fetchMissions = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/missions", {
+        const res = await axios.get("https://space-mission-dashboard.onrender.com/api/missions", {
           params: {
             rocket,
             company,
